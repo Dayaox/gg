@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span>Improcedente</span> {{vm.improcedente.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Acuerdo</span></dt>
+        <dd>
+            <span>{{vm.improcedente.acuerdo}}</span>
+        </dd>
+        <dt><span>Notificacion</span></dt>
+        <dd>
+            <span>{{vm.improcedente.notificacion}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.improcedente.status_completado">Status Completado</span></dt>
+        <dd>
+            <span>{{vm.improcedente.status_completado}}</span>
+        </dd>
+        <dt><span>Evaluacion</span></dt>
+        <dd>
+            <a ui-sref="evaluacion-detail({id:vm.improcedente.evaluacion.id})">{{vm.improcedente.evaluacion.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="improcedente-detail.edit({id:vm.improcedente.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

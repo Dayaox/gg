@@ -1,0 +1,39 @@
+
+<div>
+    <h2><span>Prevencion</span> {{vm.prevencion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Oficio</span></dt>
+        <dd>
+            <span>{{vm.prevencion.oficio}}</span>
+        </dd>
+        <dt><span>Notificacion</span></dt>
+        <dd>
+            <span>{{vm.prevencion.notificacion}}</span>
+        </dd>
+        <dt><span>Respuesta</span></dt>
+        <dd>
+            <span>{{vm.prevencion.respuesta}}</span>
+        </dd>
+        <dt><span>Status</span></dt>
+        <dd>
+            <span>{{vm.prevencion.status}}</span>
+        </dd>
+        <dt><span>Peticion</span></dt>
+        <dd>
+            <a ui-sref="peticion-detail({id:vm.prevencion.peticion.id})">{{vm.prevencion.peticion.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="prevencion-detail.edit({id:vm.prevencion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

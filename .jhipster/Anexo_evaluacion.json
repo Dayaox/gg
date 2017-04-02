@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "evaluacion",
+            "otherEntityName": "evaluacion",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "archivo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "500"
+        },
+        {
+            "fieldName": "id_peticion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170331194138",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "anexo_evaluacion",
+    "pagination": "pagination"
+}

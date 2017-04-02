@@ -1,0 +1,51 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "anexo_evaluacion",
+            "otherEntityName": "anexo_evaluacion",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "evaluacion"
+        },
+        {
+            "relationshipName": "procedente",
+            "otherEntityName": "procedente",
+            "relationshipType": "one-to-one",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "n"
+        },
+        {
+            "relationshipName": "improcedente",
+            "otherEntityName": "improcedente",
+            "relationshipType": "one-to-one",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "evaluacion"
+        },
+        {
+            "relationshipName": "presentacion",
+            "otherEntityName": "presentacion",
+            "relationshipType": "one-to-one",
+            "ownerSide": false,
+            "otherEntityRelationshipName": "evaluacion"
+        },
+        {
+            "relationshipName": "peticion",
+            "otherEntityName": "peticion",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "evaluacion"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "status_evaluacion",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170401011120",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "evaluacion",
+    "pagination": "pagination"
+}

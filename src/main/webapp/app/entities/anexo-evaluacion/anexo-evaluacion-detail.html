@@ -1,0 +1,35 @@
+
+<div>
+    <h2><span data-translate="opleSioeApp.anexo_evaluacion.detail.title">Anexo Evaluacion</span> {{vm.anexo_evaluacion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="opleSioeApp.anexo_evaluacion.archivo">Archivo</span></dt>
+        <dd>
+            <span>{{vm.anexo_evaluacion.archivo}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.anexo_evaluacion.descripcion">Descripcion</span></dt>
+        <dd>
+            <span>{{vm.anexo_evaluacion.descripcion}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.anexo_evaluacion.id_peticion">Id Peticion</span></dt>
+        <dd>
+            <span>{{vm.anexo_evaluacion.id_peticion}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.anexo_evaluacion.evaluacion">Evaluacion</span></dt>
+        <dd>
+            <a ui-sref="evaluacion-detail({id:vm.anexo_evaluacion.evaluacion.id})">{{vm.anexo_evaluacion.evaluacion.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="anexo-evaluacion-detail.edit({id:vm.anexo_evaluacion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

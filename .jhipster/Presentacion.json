@@ -1,0 +1,32 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "evaluacion",
+            "otherEntityName": "evaluacion",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "presentacion"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "acuerdo",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "notificacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status_completado",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170401011835",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "presentacion",
+    "pagination": "pagination"
+}

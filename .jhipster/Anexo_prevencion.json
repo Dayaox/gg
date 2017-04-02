@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "prevencion",
+            "otherEntityName": "prevencion",
+            "relationshipType": "many-to-one",
+            "otherEntityField": "id"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "archivo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "descripcion",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "500"
+        },
+        {
+            "fieldName": "id_solicitud",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170331194011",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "anexo_prevencion",
+    "pagination": "pagination"
+}

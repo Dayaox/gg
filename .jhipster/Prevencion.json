@@ -1,0 +1,43 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "anexo_prevencion",
+            "otherEntityName": "anexo_prevencion",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "prevencion"
+        },
+        {
+            "relationshipName": "peticion",
+            "otherEntityName": "peticion",
+            "relationshipType": "one-to-one",
+            "otherEntityField": "id",
+            "ownerSide": true,
+            "otherEntityRelationshipName": "prevencion"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "oficio",
+            "fieldType": "String",
+            "fieldValidateRules": []
+        },
+        {
+            "fieldName": "notificacion",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "respuesta",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "status",
+            "fieldType": "Boolean"
+        }
+    ],
+    "changelogDate": "20170331193520",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "prevencion",
+    "pagination": "pagination"
+}

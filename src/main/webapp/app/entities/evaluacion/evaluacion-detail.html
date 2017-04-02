@@ -1,0 +1,27 @@
+
+<div>
+    <h2><span>Evaluacion</span> {{vm.evaluacion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="opleSioeApp.evaluacion.status_evaluacion">Status Evaluacion</span></dt>
+        <dd>
+            <span>{{vm.evaluacion.status_evaluacion}}</span>
+        </dd>
+        <dt><span>Peticion</span></dt>
+        <dd>
+            <a ui-sref="peticion-detail({id:vm.evaluacion.peticion.id})">{{vm.evaluacion.peticion.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="evaluacion-detail.edit({id:vm.evaluacion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

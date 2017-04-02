@@ -1,0 +1,42 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "peticion",
+            "otherEntityName": "peticion",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "usuario"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "password",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "zona",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "distrito",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "municipio",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "privilegio",
+            "fieldType": "Integer"
+        }
+    ],
+    "changelogDate": "20170331192521",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "usuario",
+    "pagination": "infinite-scroll"
+}

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.4.xsd">
+    <!--
+        Added the constraints for entity Anexo_evaluacion.
+    -->
+    <changeSet id="20170331194138-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="evaluacion_id"
+                                 baseTableName="anexo_evaluacion"
+                                 constraintName="fk_anexo_evaluacion_evaluacion_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="evaluacion"/>
+
+    </changeSet>
+</databaseChangeLog>

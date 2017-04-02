@@ -1,0 +1,27 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipName": "peticion",
+            "otherEntityName": "peticion",
+            "relationshipType": "one-to-many",
+            "otherEntityRelationshipName": "peticionario"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "tipo",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "maxlength"
+            ],
+            "fieldValidateRulesMaxlength": "100"
+        }
+    ],
+    "changelogDate": "20170331192733",
+    "dto": "no",
+    "service": "serviceImpl",
+    "entityTableName": "peticionario",
+    "pagination": "infinite-scroll"
+}

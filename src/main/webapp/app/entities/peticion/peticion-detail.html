@@ -1,0 +1,63 @@
+
+<div>
+    <h2><span>Peticion</span> {{vm.peticion.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span>Numero</span></dt>
+        <dd>
+            <span>{{vm.peticion.numero}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.nombre_solicitante">Nombre Solicitante</span></dt>
+        <dd>
+            <span>{{vm.peticion.nombre_solicitante}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.paterno_solicitante">Paterno Solicitante</span></dt>
+        <dd>
+            <span>{{vm.peticion.paterno_solicitante}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.materno_solicitante">Materno Solicitante</span></dt>
+        <dd>
+            <span>{{vm.peticion.materno_solicitante}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.cargo_solicitante">Cargo Solicitante</span></dt>
+        <dd>
+            <span>{{vm.peticion.cargo_solicitante}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.direccion_solicitante">Direccion Solicitante</span></dt>
+        <dd>
+            <span>{{vm.peticion.direccion_solicitante}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.acto_certificar">Acto Certificar</span></dt>
+        <dd>
+            <span>{{vm.peticion.acto_certificar}}</span>
+        </dd>
+        <dt><span>Oficio</span></dt>
+        <dd>
+            <span>{{vm.peticion.oficio}}</span>
+        </dd>
+        <dt><span data-translate="opleSioeApp.peticion.nombre_responsable">Nombre Responsable</span></dt>
+        <dd>
+            <span>{{vm.peticion.nombre_responsable}}</span>
+        </dd>
+        <dt><span>Usuario</span></dt>
+        <dd>
+            <a ui-sref="usuario-detail({id:vm.peticion.usuario.id})">{{vm.peticion.usuario.id}}</a>
+        </dd>
+        <dt><span>Peticionario</span></dt>
+        <dd>
+            <a ui-sref="peticionario-detail({id:vm.peticion.peticionario.id})">{{vm.peticion.peticionario.id}}</a>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span> Back</span>
+    </button>
+
+    <button type="button" ui-sref="peticion-detail.edit({id:vm.peticion.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down"> Edit</span>
+    </button>
+</div>

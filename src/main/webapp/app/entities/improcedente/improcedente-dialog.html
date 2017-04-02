@@ -1,0 +1,49 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myImprocedenteLabel">Create or edit a Improcedente</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.improcedente.id">
+            <label for="id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.improcedente.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_acuerdo">Acuerdo</label>
+            <input type="text" class="form-control" name="acuerdo" id="field_acuerdo"
+                    ng-model="vm.improcedente.acuerdo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" for="field_notificacion">Notificacion</label>
+            <input type="text" class="form-control" name="notificacion" id="field_notificacion"
+                    ng-model="vm.improcedente.notificacion"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="opleSioeApp.improcedente.status_completado" for="field_status_completado">Status Completado</label>
+                <input type="checkbox" name="status_completado" id="field_status_completado"
+                          ng-model="vm.improcedente.status_completado"/>
+        </div>
+
+        <div class="form-group">
+            <label for="field_evaluacion">Evaluacion</label>
+            <select class="form-control" id="field_evaluacion" name="evaluacion" ng-model="vm.improcedente.evaluacion" ng-options="evaluacion as evaluacion.id for evaluacion in vm.evaluacions | orderBy:'id' track by evaluacion.id">
+                <option value=""></option>
+            </select>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span>Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span>Save</span>
+        </button>
+    </div>
+</form>
